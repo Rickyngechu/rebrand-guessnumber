@@ -57,8 +57,8 @@ body {
   align-items: center;
   padding: 1rem;
 }
-.again-tbn:link,
-.again-tbn:visited {
+.again-btn:link,
+.again-btn:visited {
   display: inline-block;
   text-decoration: none;
   padding: 1rem 2.5rem;
@@ -68,7 +68,7 @@ body {
   color: var(--color-text-black);
   transition: all 0.2s;
 }
-.again-tbn:hover {
+.again-btn:hover {
   background-color: var(--color-orange-2);
   color: var(--color-text-white);
 }
