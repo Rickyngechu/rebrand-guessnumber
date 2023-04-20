@@ -31,6 +31,10 @@ btnCheck.addEventListener('click', function (e) {
   }
   //If the input guess is correct
   else if (inputValue === random) {
+    navigator.vibrate([
+      100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30,
+      100,
+    ]);
     header.style.backgroundColor = '#30ac44';
     mainSect.style.backgroundColor = '#30ac44';
 
