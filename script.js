@@ -25,26 +25,24 @@ btnCheck.addEventListener('click', function (e) {
   //Getting the input value and converting it into a number
   const inputValue = +inputArea.value;
 
+  //If there is no any input
   if (!inputValue) {
     guessText.textContent = '😶 No number entered!';
-  } else if (inputValue === random) {
+  }
+  //If the input guess is correct
+  else if (inputValue === random) {
     header.style.backgroundColor = '#30ac44';
     mainSect.style.backgroundColor = '#30ac44';
 
     guessText.textContent = '🥳 Genious,correct guess!';
     highScore.textContent = scoreV.textContent;
     correctNum.textContent = random;
-  } else if (inputValue < random) {
+  }
+  //If the input guess is wrong
+  else if (inputValue !== random) {
     if (score > 1) {
-      guessText.textContent = '📉 Value too low';
-      score--;
-      scoreV.textContent = score;
-    } else {
-      guessText.textContent = '😥 You have lost.Try again!';
-    }
-  } else if (inputValue > random) {
-    if (score > 1) {
-      guessText.textContent = '📈 Value too high';
+      guessText.textContent =
+        inputValue < random ? '📉 Value too low' : '📈 Value too high';
       score--;
       scoreV.textContent = score;
     } else {
