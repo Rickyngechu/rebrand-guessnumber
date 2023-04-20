@@ -40,6 +40,7 @@ btnCheck.addEventListener('click', function (e) {
   }
   //If the input guess is wrong
   else if (inputValue !== random) {
+    navigator.vibrate(200);
     if (score > 1) {
       guessText.textContent =
         inputValue < random ? '📉 Value too low' : '📈 Value too high';
