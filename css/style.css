@@ -181,7 +181,14 @@ body {
 .score-cont {
   font-size: 3rem;
 }
-
+.design {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.design a {
+  text-decoration: none;
+}
 /*HERE WE ARE MAKING THE GAME TO BE MORE RESPONSIVE TO MANY OR EVEN ALL DEVICES*/
 /*
 0-500px
