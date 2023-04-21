@@ -16,7 +16,8 @@ let highScore = document.querySelector('.highestV');
 //Math.random generates number which is between 0.0 and 1.0
 //We are adding one in order the range to be from 1 to 20
 //If we had not added the 1 then range would have been 0 to 19
-const random = Math.trunc(Math.random() * 20 + 1);
+let random = Math.trunc(Math.random() * 20 + 1);
+
 let score = 20;
 
 btnCheck.addEventListener('click', function (e) {
@@ -58,12 +59,14 @@ btnCheck.addEventListener('click', function (e) {
 
 btnAgain.addEventListener('click', function (e) {
   e.preventDefault();
+  random = Math.trunc(Math.random() * 20 + 1);
+
+  score = 20;
   guessText.textContent = 'Start guessing...';
   inputArea.value = '';
   correctNum.textContent = '?';
   header.style.backgroundColor = '#fce9e9';
   mainSect.style.backgroundColor = '#fce9e9';
 
-  highScore.textContent = scoreV.textContent;
   scoreV.textContent = 20;
 });
